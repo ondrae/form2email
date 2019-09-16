@@ -36,9 +36,10 @@
     });
 function convertFormToJSON(form){
 
-    $.post( "https://wu5pz317kg.execute-api.us-east-1.amazonaws.com/Prod/send", "Hello", 
-    function(data){
+    $.post( "https://wu5pz317kg.execute-api.us-east-1.amazonaws.com/Prod/send", $("form").serialize(), 
+    function(data, e){
         console.log(data);
+        console.log(e);
     });
 }
 </script>
